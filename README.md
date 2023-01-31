@@ -7,5 +7,8 @@
 ## Описание 4 задачи 🌱
 ![task4.png](./images/task4.png)
 
+## Описание 5 задачи 🌱
+![task5.png](./images/task5.png)
+
 ## Описание 6 задачи 🌱
-![task4.png](./images/task6.png)
+![task6.png](./images/task6.png)
