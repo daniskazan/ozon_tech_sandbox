@@ -55,7 +55,7 @@ func calculateDiscount(prices []int) {
 	for price, productAmount := range priceCounts {
 		discount := (productAmount / 3) * 2 * price
 		rest := (productAmount % 3) * price
-		total = discount + rest
+		total += discount + rest
 	}
 	fmt.Println(total)
 }
