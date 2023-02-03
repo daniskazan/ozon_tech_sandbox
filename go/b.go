@@ -44,22 +44,26 @@ func prepareTests() []TestCase {
 	return tests
 }
 
+
+func calculateDiscount(prices []int) {
+
+	total := 0
+	priceCounts := make(map[int]int)
+	for _, price := range prices {
+		priceCounts[price]++
+	}
+	for price, productAmount := range priceCounts {
+		discount := (productAmount / 3) * 2 * price
+		rest := (productAmount % 3) * price
+		total = discount + rest
+	}
+	fmt.Println(total)
+}
+
+
 func main() {
 	tests := prepareTests()
-
 	for _, t := range tests {
-		priceCount := make(map[int]int)
-		for _, price := range t.Prices {
-			priceCount[price]++
-		}
-		fmt.Println(priceCount)
-
-		total := 0
-		for price, productAmount := range priceCount {
-			discountPart := (productAmount / 3) * 2 * price
-			restPart := (productAmount % 3) * price
-			total += discountPart + restPart
-		}
-		fmt.Println(total)
+		calculateDiscount(t.Prices)
 	}
 }
